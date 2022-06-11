@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Ms+Madi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ms+Madi&display=swap');
 
 body {
-	background: rgb(255,255,255);
-	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(255,231,243,1) 100%);
+	background: url("images/mina-face.png") bottom 10px right 10px no-repeat scroll, #fff2f9 linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(255,231,243,1) 100%) scroll;
 	color: #000;
 	font: 15px/1.75em 'Merriweather Sans', sans-serif;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
 	margin: 0;
-	padding: 0;
+	min-height: 100vh;
+	padding: 2em;
 }
 
 a, a:link { color: #1ba0b3; }
@@ -27,7 +30,7 @@ h1, h2, h3, h4 {
 
 h1 {
 	font-size: 4em;
-	margin: 0.25em 0 0.5em 0;
+	margin: 0.15em 0 0.4em 0;
 }
 
 h1 > span { white-space: nowrap; }
@@ -41,43 +44,32 @@ h1 img {
 
 h2 { font-size: 3.25em; }
 
-img {
-	border: 0;
-	margin: 0;
-	padding: 0;
-}
-
-div.container {
-	background: url("images/mina-face.png") bottom 10px right 10px no-repeat;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 2em;
+p
+{
+	margin-left: 0.5em;
 }
 
 div.content {
-	background: rgb(237,253,255);
 	background: linear-gradient(180deg, rgba(237,253,255,1) 0%, rgba(237,253,255,0.8) 100%);
 	border: 4px #fff solid;
 	border-radius: 2.5em;
-	box-shadow: 0 0 3em rgba(0, 0, 0, 0.3);
-	margin: 0;
+	box-shadow: 0 1em 2.5em rgb(0 15 25 / 25%);
+	margin: 0 auto 5%;
+	max-width: 50em;
 	padding: 2em;
 }
 
 div.floral {
-	background-image: url("images/floral.svg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	display: none;
+	background: center bottom no-repeat url("images/floral.svg");
+	display: block;
 	float: right;
-	margin-left: -4em;
 	width: 15em;
 	height: 15em;
 	position: relative;
-	top: -3.5em;
-	right: -3.5em;
+	top: -0.5em;
+	right: -0.5em;
 	transform: rotate(0.625turn);
+	shape-outside: polygon(2em 0, 2em 3.5em, 10em 5em, 11.5em 13em, 15em 13em, 15em 0);
 }
 
 ul.links > li {
@@ -95,27 +87,10 @@ dfn {
 	text-decoration: underline dotted;
 }
 
-@media screen and (min-height: 48em) {
-	body { min-height: 100vh; }
-
-	div.container { height: 100vh; }
-
-	div.content {
-		margin: 0 auto;
-		max-width: 50em;
-		position: relative;
-		top: 40%;
-		-webkit-transform: translateY(-40%);
-		-ms-transform: translateY(-40%);
-		transform: translateY(-40%); }
-
-	div.floral { display: block; }
-}
-
-@media screen and (max-width: 35em) {
+@media (max-width: 46em) {
 	h1 { text-align: center; }
 
-	div.container { padding: 1.5em; }
+	body { padding: 1em; }
 
 	div.floral { display: none; }
 }
