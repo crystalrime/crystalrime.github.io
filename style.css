@@ -44,10 +44,7 @@ h1 img {
 
 h2 { font-size: 3.25em; }
 
-p
-{
-	margin-left: 0.5em;
-}
+p { margin: 1em 0.5em; }
 
 div.content {
 	background: linear-gradient(180deg, rgba(237,253,255,1) 0%, rgba(237,253,255,0.8) 100%);
@@ -87,10 +84,18 @@ dfn {
 	text-decoration: underline dotted;
 }
 
-@media (max-width: 46em) {
+@media (max-width: 47em) {
+	body {
+		background-position: bottom -5px right -5px, center;
+		padding: 1.25em;
+		padding-bottom: 245px;
+	}
+	
 	h1 { text-align: center; }
-
-	body { padding: 1em; }
+	
+	p { text-align: justify; }
+	
+	div.content { padding: 1.25em; }
 
 	div.floral { display: none; }
 }
