@@ -93,9 +93,12 @@ dfn {
 	
 	h1 { text-align: center; }
 	
-	p { text-align: justify; }
+	p {
+		margin: 1em 0;
+		text-align: justify;
+	}
 	
-	div.content { padding: 1.25em; }
+	div.content { padding: 1.75em; }
 
 	div.floral { display: none; }
 }
